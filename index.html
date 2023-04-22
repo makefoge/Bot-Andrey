@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Бот Андрей</title>
+    <style>
+      /* Стили кнопок */
+      .button {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <h1>Bot Andrey</h1>
+  <body>
+    <h3>Powered by Swis Corparation</h3>
+    <div id="chat">
+      <p>Привет! Я бот Андрей. Чем я могу вам помочь?</p>
+      <button class="button" onclick="aboutMe()">О мне</button>
+      <button class="button" onclick="aboutCreator()">О создателе</button>
+    </div>
+    
+    <script>
+      function aboutMe() {
+        var chat = document.getElementById("chat");
+        chat.innerHTML += '<p>Я издание компании Swis и не имею никакого отношения к Яндексу или Сири.Также я есть в файл хабе</p>';
+        chat.innerHTML += '<button class="button" onclick="startOver()">Закончить</button>';
+      }
+      
+      function aboutCreator() {
+        var chat = document.getElementById("chat");
+        chat.innerHTML += '<p>Меня создала компания Swis, но мой директор - Маке. Он создал компанию и меня в ней.</p>';
+        chat.innerHTML += '<button class="button" onclick="startOver()">Закончить</button>';
+      }
+      
+      function startOver() {
+        var chat = document.getElementById("chat");
+        chat.innerHTML = '<p>Привет! Я бот Андрей. Чем я могу вам помочь?</p>';
+        chat.innerHTML += '<button class="button" onclick="aboutMe()">О мне</button>';
+        chat.innerHTML += '<button class="button" onclick="aboutCreator()">О создателе</button>';
+      }
+    </script>
+  </body>
+</html>
